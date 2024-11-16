@@ -18,7 +18,11 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": "./src",     // Base path for your aliases
+    "paths": {
+      "@/*": ["./*"]   // Define a path alias for "@/something" to map to "src/something"
+    }
   },
   "include": [
     "src"
