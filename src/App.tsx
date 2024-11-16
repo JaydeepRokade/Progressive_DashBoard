@@ -25,9 +25,10 @@ import Layout from './components/layout';
 import { resources } from './config/resources';
 import Create from './pages/company/create';
 import Edit from './pages/company/edit';
-import List from './pages/tasks/list';
+// import List from './pages/tasks/list';
 import EditTask from './pages/tasks/edit';
 import CreateTask from './pages/tasks/create';
+import { TasksListPage } from './pages/tasks/list';
 
 
 // import { Login } from "./pages/login";
@@ -89,9 +90,11 @@ function App() {
                                 <Route path="edit/:id" element={<Edit/>}/>
                                 </Route>
                                <Route path="/tasks" element={
-                                <List>
+                                <TasksListPage>
                                     <Outlet/>
-                                </List>
+                                </TasksListPage>
+                                    
+                                
                                 }>
                                     <Route path="new" element={<CreateTask/>} />
                                     <Route path="edit/:id" element={<EditTask/>} />
