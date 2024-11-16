@@ -43,7 +43,7 @@ function App() {
     
     return (
         <BrowserRouter>
-        <GitHubBanner />
+        
         <RefineKbarProvider>
             
 <AntdApp>
