@@ -147,6 +147,7 @@ export const TasksListPage = ({children}: React.PropsWithChildren) => {
                   <ProjectCardMemo
                   {...task}
                   dueDate={task.dueDate || undefined}
+                  updateAt={task.updatedAt}
                   />  
                 </KanbanItem>
             );
@@ -174,6 +175,7 @@ export const TasksListPage = ({children}: React.PropsWithChildren) => {
                         <ProjectCardMemo
                         {...task}
                         dueDate={task.dueDate || undefined}
+                        updateAt={task.updatedAt}
                         />
                     </KanbanItem>
                 );
