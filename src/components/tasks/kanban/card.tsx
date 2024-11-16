@@ -5,7 +5,7 @@ import { User } from '@/graphql/schema.types'
 import { getDateColor } from '@/utilities'
 import { ClockCircleOutlined, DeleteOutlined, EyeOutlined, MoreOutlined } from '@ant-design/icons'
 import { useDelete, useNavigation } from '@refinedev/core'
-import { Button, Card, ConfigProvider, Dropdown, Space, Tag, theme, Tooltip } from 'antd'
+import { Button, Card, ConfigProvider, Dropdown, MenuProps, Space, Tag, theme, Tooltip } from 'antd'
 import dayjs from 'dayjs'
 import React, { memo, useMemo } from 'react'
 
@@ -181,5 +181,5 @@ export const ProjectCardMemo = memo(ProjectCard, (prev, next) => {
         prev.dueDate === next.dueDate &&
         prev.users?.length === next.users?.length && 
         prev.updateAt === next.updateAt
-    )
-})
+    );
+});
