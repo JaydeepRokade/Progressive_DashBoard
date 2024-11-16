@@ -2,15 +2,17 @@ import CustomAvatar from '@/components/custom-avatar';
 import { PaginationTotal } from '@/components/pagination-total';
 import { Text } from '@/components/text';
 import { COMPANIES_LIST_QUERY } from '@/graphql/queries';
-import { Company } from '@/graphql/schema.types';
+import { CompaniesListQuery } from '@/graphql/types';
+// import { Company } from '@/graphql/schema.types';
 import { currencyNumber } from '@/utilities';
 import { SearchOutlined } from '@ant-design/icons';
 import { CreateButton, DeleteButton, EditButton, FilterDropdown, List, useTable } from '@refinedev/antd'
 import { getDefaultFilter, HttpError, useGo } from '@refinedev/core';
+import { GetFieldsFromList } from '@refinedev/nestjs-query';
 import { Input, Space, Table } from 'antd';
 import React from 'react'
 
-
+type Company = GetFieldsFromList<CompaniesListQuery>;
 
 export const CompanyList = ({children} : React.PropsWithChildren) => {
   const go = useGo();
